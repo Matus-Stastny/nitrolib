@@ -26,6 +26,7 @@ Located in `@kiwicom/nitro/lib/components/<component>`.
 * [InitCurrency](#initcurrency)
 * [InitIntl](#initintl)
 * [InitLog](#initlog)
+* [InitStarred](#initstarred)
 * [Mobile](#mobile)
 * [Price](#price)
 * [Text](#text)
@@ -257,7 +258,11 @@ import NavBar from "@kiwicom/nitro/lib/components/NavBar";
 **Types:**
 ```js
 type Props = {|
+<<<<<<< HEAD
   starred: React.Node,
+=======
+  chat: React.Node,
+>>>>>>> 493a77f0... Starred: Duration Component
   subscription: React.Node,
   portal: string,
   onOpenFaq: ?() => void,
@@ -285,6 +290,7 @@ See types:
 * [intl](./services#intl)
 * [log](./services#log)
 * [modal](./services#modal)
+* [starred](./services#starred)
 
 **Selectors `data-test`:**
 * ```"NavBar"```
@@ -714,6 +720,32 @@ ReactDOM.render(
   node,
 );
 ```
+
+### InitStarred
+
+**Import:**
+```js
+import InitStarred from "@kiwicom/nitro/lib/components/InitStarred";
+```
+
+**Types:**
+```js
+type Args = {|
+  starredList: Array<StarredItem>,
+  onRemoveStarred: (arg: number) => void,
+  onAddStarred: (arg: StarredItem) => void,
+  onClearStarred: () => void,
+|};
+
+type Props = {|
+  children: (args: Args) => React.Node,
+|};
+```
+
+See types:
+* [Starred](./records#starred)
+
+_TODO_;
 
 ### Mobile
 
