@@ -137,7 +137,7 @@ const NavBar = ({
           </WrapperChild>
         </Desktop>
         <WrapperChild>
-          <Starred positionMenuDesktop={270} positionMenuTablet={0} />
+          <Starred positionMenuDesktop={270} inverted={inverted} positionMenuTablet={0} />
         </WrapperChild>
         <Mobile>
           <WrapperChild>
