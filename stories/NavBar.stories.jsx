@@ -33,22 +33,19 @@ const props = {
 storiesOf("NavBar", module)
   .addDecorator(withData, withKnobs)
   .add("default", () => (
-    <>
-      <ModalsAuth portal="" />
-      <NavBar
-        headerLinks={<HeaderLinks {...props} />}
-        chat={<h1>Chat</h1>}
-        subscription={<h1>Subscription</h1>}
-        debug={<h1>Debug</h1>}
-        portal=""
-        starred={<span>Starred</span>}
-        onOpenFaq={action("Open FAQ")}
-        onSetModal={action("Set modal")}
-        onLogoClick={action("Click logo")}
-        onSaveLanguage={action("Save language")}
-        onSelectTrip={action("Select trip")}
-      />
-    </>
+    <NavBar
+      headerLinks={<HeaderLinks {...props} highlightLinks={0} />}
+      chat={<h1>Chat</h1>}
+      subscription={<h1>Subscription</h1>}
+      debug={<h1>Debug</h1>}
+      portal=""
+      starred={<span>Starred</span>}
+      onOpenFaq={action("Open FAQ")}
+      onSetModal={action("Set modal")}
+      onLogoClick={action("Click logo")}
+      onSaveLanguage={action("Save language")}
+      onSelectTrip={action("Select trip")}
+    />
   ))
   .add("inverted", () => (
     <>

@@ -5,6 +5,8 @@ import AirplaneUp from "@kiwicom/orbit-components/lib/icons/AirplaneUp";
 import CarRental from "@kiwicom/orbit-components/lib/icons/CarRental";
 import Accommodation from "@kiwicom/orbit-components/lib/icons/Accommodation";
 import Suitcase from "@kiwicom/orbit-components/lib/icons/Suitcase";
+import TextWrapper from "@kiwicom/orbit-components/lib/Text";
+import Stack from "@kiwicom/orbit-components/lib/Stack";
 
 import mq from "../../../../styles/mq";
 import IconWrapper from "../../primitives/IconWrapper";
@@ -41,26 +43,31 @@ type Props = {|
   newWindow: boolean,
   active?: boolean,
   inverted?: boolean,
+  highlightLinks: boolean,
 |};
 
-const Link = ({ active, link, newWindow, icon, text, inverted }: Props) => (
+const Link = ({ active, link, newWindow, icon, text, inverted, highlightLinks }: Props) => (
   <StyledLink
     active={active}
     href={link}
+    highlightLinks={highlightLinks}
     inverted={inverted}
     target={newWindow ? "_blank" : null}
     rel={newWindow ? "noopener noreferrer" : null}
   >
-    {icon && mapIcons[icon] && (
-      <Icon>
-        <IconWrapper>{mapIcons[icon]}</IconWrapper>
-      </Icon>
-    )}
-    {text}
+    <Stack align="center">
+      {icon && mapIcons[icon] && (
+        <Icon>
+          <IconWrapper>{mapIcons[icon]}</IconWrapper>
+        </Icon>
+      )}
+      <div>{text}</div>
+    </Stack>
   </StyledLink>
 );
 
 Link.defaultProps = {
+  highlightLinks: false,
   active: false,
   newWindow: false,
 };

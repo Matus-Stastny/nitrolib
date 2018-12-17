@@ -1,6 +1,5 @@
 // @flow strict
 import styled, { css } from "styled-components";
-import { right, left } from "@kiwicom/orbit-components/lib/utils/rtl";
 
 import mq from "../../../styles/mq";
 import { themeDefault } from "../../../records/Theme";
@@ -10,24 +9,22 @@ type LinkProps = {|
   ...ThemeProps,
   active: boolean,
   inverted: boolean,
+  highlightLinks: boolean,
 |};
 
 const StyledLink = styled.a`
-  display: flex;
-  align-items: center;
-  font-size: ${({ theme }: ThemeProps) => theme.orbit.fontSizeTextSmall};
   font-weight: ${({ theme }: ThemeProps) => theme.orbit.fontWeightMedium};
+  font-size: ${({ theme }: ThemeProps) => theme.orbit.fontSizeTextSmall};
   text-decoration: none;
-  position: relative;
   cursor: pointer;
-  margin-${/* sc-custom "left" */ left}: 20px;
-  height: 50px;
 
-  &:link, &:visited {
-    color: ${({ active, theme, inverted }: LinkProps) =>
+  &:link,
+  &:visited {
+    color: ${({ active, theme, inverted, highlightLinks }: LinkProps) =>
       inverted
         ? (active && theme.orbit.paletteWhiteActive) || theme.orbit.paletteWhite
-        : (active && theme.orbit.paletteProductNormal) || theme.orbit.paletteInkNormal};
+        : ((active || highlightLinks) && theme.orbit.paletteProductNormal) ||
+          theme.orbit.paletteInkNormal};
 
     &:hover {
       color: ${({ theme, inverted }: LinkProps) =>
@@ -36,13 +33,16 @@ const StyledLink = styled.a`
   }
 
   ${mq.ltTablet(css`
-    margin-${/* sc-custom "left" */ left}: 0;
-    padding-${/* sc-custom "left" */ left}: 10px;
-    font-size: ${({ theme }: ThemeProps) => theme.orbit.fontSizeTextLarge};
     font-weight: ${({ theme }: ThemeProps) => theme.orbit.fontWeightNormal};
+    font-size: ${({ theme }: ThemeProps) => theme.orbit.fontSizeTextNormal};
 
-    i {
-      padding-${/* sc-custom "right" */ right}: 10px;
+    &:link,
+    &:visited {
+      color: ${({ theme, highlightLinks }: LinkProps) =>
+        highlightLinks ? theme.orbit.paletteProductNormal : theme.orbit.paletteInkNormal};
+      i {
+        color: ${({ theme }) => theme.orbit.paletteInkNormal};
+      }
     }
 
     &:link, &:visited {

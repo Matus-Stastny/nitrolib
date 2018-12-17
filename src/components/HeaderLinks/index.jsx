@@ -1,10 +1,11 @@
 // @flow strict
 import * as React from "react";
-import Airplane from "@kiwicom/orbit-components/lib/icons/Airplane";
+import AirplaneUp from "@kiwicom/orbit-components/lib/icons/AirplaneUp";
 import ChevronDown from "@kiwicom/orbit-components/lib/icons/ChevronDown";
 import styled, { css } from "styled-components";
 import { left } from "@kiwicom/orbit-components/lib/utils/rtl";
-import Text from "@kiwicom/orbit-components/lib/Text";
+import Stack from "@kiwicom/orbit-components/lib/Stack";
+import TextWrapper from "@kiwicom/orbit-components/lib/Text";
 
 import mq from "../../styles/mq";
 import ClickOutside from "../ClickOutside";
@@ -20,9 +21,7 @@ import type { Context } from "../../services/log/context";
 import type { Splitster, Response } from "./services/api";
 
 const Margin = styled.div`
-  ${mq.ltDesktop(css`
-    margin-${/* sc-custom "left" */ left}: 20px;
-  `)}
+    margin-${/* sc-custom "left" */ left}: 16px;
 
   ${mq.ltSmallMobile(css`
     margin-${/* sc-custom "left" */ left}: 0;
@@ -109,6 +108,7 @@ class HeaderLinks extends React.Component<Props, State> {
   render() {
     const { inverted, active } = this.props;
     const { services } = this.state;
+    const { inverted, highlightLinks } = this.props;
 
     if (!services) return null;
 
@@ -125,12 +125,18 @@ class HeaderLinks extends React.Component<Props, State> {
                     {open && (
                       <Popup>
                         {services && services.length > 0 && (
-                          <Links inverted={inverted} services={services} active={active} />
+                          <Stack direction="column">
+                            <Links
+                              services={services}
+                              inverted={inverted}
+                              active={active}
+                            />
+                          </Stack>
                         )}
                       </Popup>
                     )}
                     <IconWrapper hover onClick={onToggle}>
-                      <Airplane />
+                      <AirplaneUp />
                       <ChevronDown size="small" />
                     </IconWrapper>
                   </>
@@ -141,7 +147,11 @@ class HeaderLinks extends React.Component<Props, State> {
         </Mobile>
         <Desktop>
           {services && services.length > 0 && (
-            <Links inverted={inverted} services={services} active={active} />
+            <Margin>
+              <Stack flex align="center">
+                <Links services={services} inverted={inverted} active={active} />
+              </Stack>
+            </Margin>
           )}
         </Desktop>
       </Text>
