@@ -5,7 +5,6 @@ import AirplaneUp from "@kiwicom/orbit-components/lib/icons/AirplaneUp";
 import CarRental from "@kiwicom/orbit-components/lib/icons/CarRental";
 import Accommodation from "@kiwicom/orbit-components/lib/icons/Accommodation";
 import Suitcase from "@kiwicom/orbit-components/lib/icons/Suitcase";
-import TextWrapper from "@kiwicom/orbit-components/lib/Text";
 import Stack from "@kiwicom/orbit-components/lib/Stack";
 
 import mq from "../../../../styles/mq";

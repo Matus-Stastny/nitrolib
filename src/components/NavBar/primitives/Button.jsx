@@ -9,7 +9,7 @@ import { themeDefault } from "../../../records/Theme";
 import buttonMixin from "../../../styles/mixins/button";
 
 export type Bg = "white" | "primary" | "secondary";
-export type Color = "primary" | "secondary" | false;
+export type Color = "primary" | "secondary";
 
 type Props = {|
   onClick: (ev: SyntheticEvent<HTMLButtonElement>) => void,
@@ -18,6 +18,7 @@ type Props = {|
   onClick?: () => void,
   disabled?: boolean,
   color?: Color,
+  transition?: boolean,
   background?: Bg,
   padding?: string,
   marginLeft?: number,
@@ -42,7 +43,6 @@ const Button: ReactComponentFunctional<Props, ThemeProps> = styled.button`
   cursor: pointer;
   font-weight: ${({ theme, bold }: PropsAll) =>
     bold ? theme.orbit.fontWeightBold : theme.orbit.fontWeightMedium};
-  font-size: ${({ theme }: ThemeProps) => theme.orbit.fontSizeTextSmall};
   font-family: ${({ theme }: ThemeProps) => theme.orbit.fontFamily};
   text-decoration: none;
   background: ${({ theme, background }: PropsAll) =>
@@ -52,15 +52,13 @@ const Button: ReactComponentFunctional<Props, ThemeProps> = styled.button`
         (background === "secondary" && theme.orbit.backgroundButtonSecondary)
       : `transparent`};
   white-space: nowrap;
-  ${({ transition }) => transition && `transition: color 0.2s ease-in-out`};
-  ${({ padding }) => padding && `padding: ${padding}`};
+  ${({ transition }: PropsAll) => transition && `transition: color 0.2s ease-in-out`};
+  ${({ padding }: PropsAll) => padding && `padding: ${padding}`};
   ${({ marginLeft, theme }) => marginLeft && `margin-${left({ theme })}: ${marginLeft}px`};
   ${({ marginRight, theme }) => marginRight && `margin-${right({ theme })}: ${marginRight}px`};
-  ${({ fontSize }) => fontSize && `font-size: ${fontSize}`};
-  ${({ x, y, direction }) => x && `justify-content: ${direction === "column" ? y : x}`};
-  ${({ x, y, direction }) => y && `align-items: ${direction === "column" ? x : y}`};
-  ${({ direction }) => direction && `flex-direction: ${direction}`};
-  ${({ disabled }) => disabled && `opacity: 0.5`};
+  font-size: ${({ fontSize, theme }: PropsAll) =>
+    fontSize ? `${fontSize}` : `${theme.orbit.fontSizeTextSmall}`};
+  ${({ disabled }: PropsAll) => disabled && `opacity: 0.5`};
   &:visited,
   &:active,
   &:link {

@@ -442,20 +442,16 @@ exports[`#Help render 1`] = `
     }
   }
 >
-  <Desktop
-    display="block"
-  >
+  <Help__GtBigMobile>
     <Translate
       html={false}
       t="common.help"
       transform={[Function]}
       values={Object {}}
     />
-  </Desktop>
-  <Mobile
-    display="block"
-  >
+  </Help__GtBigMobile>
+  <Help__LtBigMobile>
     <QuestionCircle />
-  </Mobile>
+  </Help__LtBigMobile>
 </Button>
 `;

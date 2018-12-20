@@ -19,9 +19,6 @@ type Props = {|
   marginRight?: number,
   fontSize?: string,
   disabled?: boolean,
-  x?: string,
-  y?: string,
-  direction?: string,
 |};
 
 // $FlowExpected: TODO describe

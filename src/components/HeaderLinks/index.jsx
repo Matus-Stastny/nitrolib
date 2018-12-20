@@ -5,8 +5,8 @@ import ChevronDown from "@kiwicom/orbit-components/lib/icons/ChevronDown";
 import styled, { css } from "styled-components";
 import { left } from "@kiwicom/orbit-components/lib/utils/rtl";
 import Stack from "@kiwicom/orbit-components/lib/Stack";
-import TextWrapper from "@kiwicom/orbit-components/lib/Text";
 
+import Flex from "../../primitives/Flex";
 import mq from "../../styles/mq";
 import ClickOutside from "../ClickOutside";
 import Toggle from "../Toggle";
@@ -108,7 +108,6 @@ class HeaderLinks extends React.Component<Props, State> {
   render() {
     const { inverted, active } = this.props;
     const { services } = this.state;
-    const { inverted, highlightLinks } = this.props;
 
     if (!services) return null;
 
@@ -135,9 +134,11 @@ class HeaderLinks extends React.Component<Props, State> {
                         )}
                       </Popup>
                     )}
-                    <IconWrapper hover onClick={onToggle}>
+                    <IconWrapper act={open} hover onClick={onToggle}>
+                    <Flex y="center">
                       <AirplaneUp />
                       <ChevronDown size="small" />
+                    </Flex>
                     </IconWrapper>
                   </>
                 </ClickOutside>

@@ -93,7 +93,7 @@ const Trips = ({ auth, env, onSelect }: Props) => {
             </Flex>
           </Desktop>
           <Mobile display="flex">
-            <Button onClick={onToggle} y="center" color="secondary">
+            <Button onClick={onToggle} color="secondary">
               <Passenger size="small" />
               <UserWrapper>
                 <UserName>{username}</UserName>
