@@ -3,7 +3,12 @@
 * `yarn add @kiwicom/nitro`
 
 **Peer dependencies:**
+<<<<<<< HEAD
 * `@kiwicom/orbit-components: ^0.35.0`
+=======
+* `@kiwicom/orbit-components: ^0.30.0`
+* `@kiwicom/orbit-design-tokens: ^0.3.0`
+>>>>>>> 80464657... ItineraryNew: Types
 * `ramda: ^0.26.1`
 * `react: ^16.8.0`
 * `react-dom: ^16.8.0`

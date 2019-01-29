@@ -1,0 +1,125 @@
+[
+  {
+    "id": "cheburek",
+    "price": "130",
+    "provider": {
+      "id": "pelmeni",
+      "name": "kvas",
+      "code": "da Vinci"
+    },
+    "type": "return",
+    "hasNoCheckedBags": false,
+    "outbound": {
+      "segments": [
+        {
+          "id": "segment1",
+          "source": {
+            "station": {
+              "id": "station1",
+              "name": "Moscow",
+              "code": "VKO",
+              "city": "Moscow",
+              "country": "Russia",
+              "type": "AIRPORT"
+            },
+            "time": "2019-03-17T03:24:00.000Z"
+          },
+          "destination": {
+            "station": {
+              "id": "station2",
+              "name": "Prague",
+              "code": "PRG",
+              "city": "Prague",
+              "country": "Czech Republic",
+              "type": "AIRPORT"
+            },
+            "time": "2019-03-17T05:30:00.000Z"
+          },
+          "type": "FLIGHT",
+          "code": "1",
+          "layover": {
+            "duration": 30,
+            "isKiwiComGuarantee": false,
+            "isStationChange": false,
+            "isBaggageRecheck": false
+          },
+          "carrier": {
+            "id": "DP",
+            "name": "Pobeda",
+            "code": "DP"
+          },
+          "operatingCarrier": {
+            "id": "DP",
+            "name": "Pobeda",
+            "code": "DP"
+          },
+          "seatInfo": {
+            "pitch": 10,
+            "width": 300,
+            "recline": 300,
+            "hasPower": false,
+            "hasAudioVideo": false
+          },
+          "hasWifi": false
+        }
+      ],
+      "carriers": []
+    },
+    "inbound": {
+      "segments": [
+        {
+          "id": "segment1",
+          "source": {
+            "station": {
+              "id": "station1",
+              "name": "Prague",
+              "code": "PRG",
+              "city": "Prague",
+              "country": "Czech Republic",
+              "type": "AIRPORT"
+            },
+            "time": "2019-03-25T03:30:00.000Z"
+          },
+          "destination": {
+            "station": {
+              "id": "station2",
+              "name": "Moscow",
+              "code": "VKO",
+              "city": "Moscow",
+              "country": "Russia",
+              "type": "AIRPORT"
+            },
+            "time": "2019-03-25T05:24:00.000Z"
+          },
+          "type": "FLIGHT",
+          "code": "1",
+          "layover": {
+            "duration": 30,
+            "isKiwiComGuarantee": false,
+            "isStationChange": false,
+            "isBaggageRecheck": false
+          },
+          "carrier": {
+            "id": "DP",
+            "name": "Pobeda",
+            "code": "DP"
+          },
+          "operatingCarrier": {
+            "id": "DP",
+            "name": "Pobeda",
+            "code": "DP"
+          },
+          "seatInfo": {
+            "pitch": 10,
+            "width": 300,
+            "recline": 300,
+            "hasPower": false,
+            "hasAudioVideo": false
+          },
+          "hasWifi": false
+        }
+      ],
+      "carriers": []
+    }
+  }
+]

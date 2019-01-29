@@ -1,0 +1,138 @@
+[
+  {
+    "id": "cheburek",
+    "price": "130",
+    "provider": {
+      "id": "pelmeni",
+      "name": "kvas",
+      "code": "da Vinci"
+    },
+    "type": "oneWay",
+    "hasNoCheckedBags": false,
+    "sector": {
+      "id": "sector1",
+      "segments": [
+        {
+          "id": "segment1",
+          "source": {
+            "station": {
+              "id": "station1",
+              "name": "Moscow",
+              "code": "VKO",
+              "city": "Moscow",
+              "country": "Russia",
+              "type": "AIRPORT"
+            },
+            "time": "2019-03-17T03:24:00.000Z"
+          },
+          "destination": {
+            "station": {
+              "id": "station2",
+              "name": "Prague",
+              "code": "PRG",
+              "city": "Prague",
+              "country": "Czech Republic",
+              "type": "AIRPORT"
+            },
+            "time": "2019-03-17T05:30:00.000Z"
+          },
+          "type": "FLIGHT",
+          "code": "1",
+          "layover": {
+            "duration": 30,
+            "isKiwiComGuarantee": false,
+            "isStationChange": false,
+            "isBaggageRecheck": false
+          },
+          "carrier": {
+            "id": "DP",
+            "name": "Pobeda",
+            "code": "DP"
+          },
+          "operatingCarrier": {
+            "id": "DP",
+            "name": "Pobeda",
+            "code": "DP"
+          },
+          "seatInfo": {
+            "pitch": 10,
+            "width": 300,
+            "recline": 300,
+            "hasPower": false,
+            "hasAudioVideo": false
+          },
+          "hasWifi": false
+        },
+        {
+          "id": "segment2",
+          "source": {
+            "station": {
+              "id": "station2",
+              "name": "Prague",
+              "code": "PRG",
+              "city": "Prague",
+              "country": "Czech Republic",
+              "type": "AIRPORT"
+            },
+            "time": "2019-03-18T04:25:00.000Z"
+          },
+          "destination": {
+            "station": {
+              "id": "station2",
+              "name": "London",
+              "code": "LTN",
+              "city": "London",
+              "country": "United Kingdom",
+              "type": "AIRPORT"
+            },
+            "time": "2019-03-18T06:30:00.000Z"
+          },
+          "type": "FLIGHT",
+          "code": "1",
+          "layover": {
+            "duration": 30,
+            "isKiwiComGuarantee": true,
+            "isStationChange": false,
+            "isBaggageRecheck": false
+          },
+          "carrier": {
+            "id": "W6",
+            "name": "Wizzair",
+            "code": "W6"
+          },
+          "operatingCarrier": {
+            "id": "W6",
+            "name": "Wizzair",
+            "code": "W6"
+          },
+          "seatInfo": {
+            "pitch": 10,
+            "width": 300,
+            "recline": 300,
+            "hasPower": false,
+            "hasAudioVideo": false
+          },
+          "hasWifi": false
+        }
+      ],
+      "carriers": [
+        {
+          "id": "DP",
+          "name": "Pobeda",
+          "code": "DP"
+        },
+        {
+          "id": "W6",
+          "name": "Wizzair",
+          "code": "W6"
+        }
+      ],
+      "duration": 240,
+      "stopover": {
+        "nightsCount": 1,
+        "arrival": {},
+        "departure": {}
+      }
+    }
+  }
+]
