@@ -7,13 +7,6 @@ import Translate from "../../../../../Translate";
 import type { TripList_list } from "./__generated__/TripList_list.graphql";
 import OneWayTrips from "../OneWayTrips";
 import MulticityTrips from "../MulticityTrips";
-<<<<<<< HEAD
-import TripListBottom from "../TripListBottom";
-import BottomTripItem from "../BottomTripItem";
-import { themeDefault } from "../../../../../../records/Theme";
-import type { ThemeProps } from "../../../../../../records/Theme";
-=======
->>>>>>> 493a77f0... Starred: Duration Component
 import ReturnTrips from "../ReturnTrips";
 
 const Paddings = styled.div`
@@ -60,7 +53,6 @@ const TripList = ({ list, onSelect }: Props) => {
             return <MulticityTrips key={item.id} item={item} onSelect={onSelect} />;
           }
           /* eslint-enable no-underscore-danble */
-
           return null;
         })}
     </>

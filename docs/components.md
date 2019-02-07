@@ -258,11 +258,6 @@ import NavBar from "@kiwicom/nitro/lib/components/NavBar";
 **Types:**
 ```js
 type Props = {|
-<<<<<<< HEAD
-  starred: React.Node,
-=======
-  chat: React.Node,
->>>>>>> 493a77f0... Starred: Duration Component
   subscription: React.Node,
   portal: string,
   onOpenFaq: ?() => void,
