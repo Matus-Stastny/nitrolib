@@ -8,6 +8,8 @@ import type { TripList_list } from "./__generated__/TripList_list.graphql";
 import OneWayTrips from "../OneWayTrips";
 import MulticityTrips from "../MulticityTrips";
 import ReturnTrips from "../ReturnTrips";
+import type { ThemeProps } from "../../../../../../records/Theme";
+import { themeDefault } from "../../../../../../records/Theme";
 
 const Paddings = styled.div`
   padding: ${({ theme }: ThemeProps) => theme.orbit.spaceSmall};

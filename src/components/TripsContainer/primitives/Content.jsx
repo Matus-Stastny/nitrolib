@@ -9,14 +9,10 @@ type AllProps = ThemeProps & {
 };
 
 const Content = styled.div`
-<<<<<<< HEAD
-  padding: ${({ padding, theme }: AllProps) => (padding ? theme.orbit.spaceSmall : `0`)};
-=======
   max-height: calc(100vh - 140px);
-  padding: ${({ padding }: Padding) => (padding ? `12px` : `0`)};
+  padding: ${({ padding, theme }: AllProps) => (padding ? theme.orbit.spaceSmall : `0`)};
   overflow-y: auto;
   overflow-x: hidden;
->>>>>>> 493a77f0... Starred: Duration Component
 `;
 
 Content.defaultProps = {
