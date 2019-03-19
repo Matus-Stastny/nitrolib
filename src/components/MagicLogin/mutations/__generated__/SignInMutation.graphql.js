@@ -1,6 +1,6 @@
 /**
  * @flow
- * @relayHash 1143e48f1eaf6fd0aa6d17efa3308265
+ * @relayHash b91eee5e2e631715b970ba65438c4546
  */
 
 /* eslint-disable */
@@ -25,7 +25,9 @@ export type SignInMutationResponse = {|
         +firstName: ?string,
         +lastName: ?string,
         +emailVerified: ?boolean,
-        +affiliateId: ?string,
+      |},
+      +bookingIdentity: ?{|
+        +affiliateId: ?string
       |},
     |},
   |}
@@ -53,6 +55,9 @@ mutation SignInMutation(
         firstName
         lastName
         emailVerified
+      }
+      bookingIdentity {
+        affiliateId
       }
     }
   }
@@ -184,6 +189,24 @@ v1 = [
                 "storageKey": null
               }
             ]
+          },
+          {
+            "kind": "LinkedField",
+            "alias": null,
+            "name": "bookingIdentity",
+            "storageKey": null,
+            "args": null,
+            "concreteType": "BookingIdentity",
+            "plural": false,
+            "selections": [
+              {
+                "kind": "ScalarField",
+                "alias": null,
+                "name": "affiliateId",
+                "args": null,
+                "storageKey": null
+              }
+            ]
           }
         ]
       }
@@ -210,11 +233,11 @@ return {
     "operationKind": "mutation",
     "name": "SignInMutation",
     "id": null,
-    "text": "mutation SignInMutation(\n  $email: String!\n  $password: String!\n  $brand: Brand!\n) {\n  signIn(email: $email, password: $password, brand: $brand) {\n    success\n    user {\n      token\n      identity {\n        id(opaque: false)\n        email\n        firstName\n        lastName\n        emailVerified\n      }\n    }\n  }\n}\n",
+    "text": "mutation SignInMutation(\n  $email: String!\n  $password: String!\n  $brand: Brand!\n) {\n  signIn(email: $email, password: $password, brand: $brand) {\n    success\n    user {\n      token\n      identity {\n        id(opaque: false)\n        email\n        firstName\n        lastName\n        emailVerified\n      }\n      bookingIdentity {\n        affiliateId\n      }\n    }\n  }\n}\n",
     "metadata": {}
   }
 };
 })();
 // prettier-ignore
-(node/*: any*/).hash = '468dac6cfcd0566ff21f823acdc5ce9e';
+(node/*: any*/).hash = 'da68c97eb34ebcdd003546cac3eae715';
 module.exports = node;

@@ -12,6 +12,8 @@ describe("#toUser", () => {
         firstName: "Joe",
         lastName: "Doe",
         emailVerified: true,
+      },
+      bookingIdentity: {
         affiliateId: "lanthi",
       },
     };
@@ -34,6 +36,7 @@ describe("#toUser", () => {
     const user = {
       token: null,
       identity: null,
+      bookingIdentity: null,
     };
 
     expect(toUser(user)).toEqual({
