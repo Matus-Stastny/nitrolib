@@ -8,7 +8,7 @@ import type { StarredItem } from "../../../../records/Starred";
 
 type Props = {|
   trips: StarredItem[],
-  onRemove: (arg: string) => void,
+  onRemove: (id: string, e: SyntheticEvent<HTMLDivElement>) => void,
   goToJourneyNitro: (item: StarredItem) => void,
   shareUrl: (item: StarredItem) => string,
 |};
@@ -28,7 +28,7 @@ const StarredTrips = ({ trips, goToJourneyNitro, shareUrl, onRemove }: Props): R
         cabinClass={cabinClass}
         itinerary={itinerary}
         shareUrl={shareUrl(trip)}
-        onRemove={() => onRemove(id)}
+        onRemove={e => onRemove(id, e)}
         created={createdAt}
         updated={updatedAt}
         priceUpdatedAt={priceUpdatedAt}

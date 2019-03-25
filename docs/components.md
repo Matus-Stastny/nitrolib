@@ -726,7 +726,7 @@ import InitStarred from "@kiwicom/nitro/lib/components/InitStarred";
 **Types:**
 ```js
 type Args = {|
-  starredList: Array<StarredItem>,
+  starredList: StarredItem[],
   onRemoveStarred: (arg: number, e: SyntheticMouseEvent<HTMLDivElement>) => void,
   onAddStarred: (arg: StarredItem) => void,
   lang: string,

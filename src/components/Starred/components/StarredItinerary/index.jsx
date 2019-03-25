@@ -32,7 +32,7 @@ type Props = {|
   passengerMulty: boolean,
   cabinClass: CabinClass,
   goToJourneyNitro: () => void,
-  onRemove: () => void,
+  onRemove: (e: SyntheticEvent<HTMLDivElement>) => void,
   priceUpdatedAt: ?Date,
   shareUrl: string,
   created: Date,
