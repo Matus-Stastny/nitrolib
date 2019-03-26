@@ -9,10 +9,8 @@ coverage
 data
 dist-storybook
 node_modules
-lib
 .env
 npm-debug.log
 yarn-error.log
 yalc.lock
-tkeys.json
 .DS_Store

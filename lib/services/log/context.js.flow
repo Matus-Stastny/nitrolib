@@ -1,0 +1,14 @@
+// @flow strict
+import * as React from "react";
+
+import type { Event, Props } from "../../records/Event";
+
+export type Context = {|
+  log: (event: Event, props: Props) => void,
+|};
+
+declare var context: React.Context<Context>;
+
+export const { Provider, Consumer } = context;
+
+export default context;

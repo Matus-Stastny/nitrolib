@@ -1,0 +1,11 @@
+// @flow strict
+import * as React from "react";
+
+type Props = {|
+  amount: number,
+  currency: string,
+  onLearnMoreClick: (e: SyntheticEvent<HTMLButtonElement>) => void, // Triggers redirection to learn more article
+  onMoreTripsClick: (e: SyntheticEvent<HTMLButtonElement>) => void, // Triggers modal with alternative trips
+|};
+
+declare export default React.ComponentType<Props>;
