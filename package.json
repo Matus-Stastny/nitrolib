@@ -45,6 +45,7 @@
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/runtime": "^7.1.5",
     "@babel/traverse": "^7.1.6",
+    "@kiwicom/orbit-design-tokens": "^0.4.0",
     "btoa-lite": "^1.0.0",
     "chalk": "^2.4.1",
     "date-fns": "^2.0.0-alpha.27",
