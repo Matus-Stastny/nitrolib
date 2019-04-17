@@ -406,6 +406,7 @@ type Props = {|
 * [intl](./services#intl)
 
 **Selectors `data-test`:**
+* ```"BaggageOverview-BaggageItem-Passengers"```
 * ```"BaggageOverview-NoPersonalItem"```
 * ```{`BaggageOverview-${context}`}```
 * ```{`BaggageOverview-BaggageItem-${category}`}```
