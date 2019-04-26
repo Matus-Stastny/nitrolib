@@ -37,6 +37,8 @@
   "baggage_modal.select.no_personal_item": true,
   "baggage_modal.summary.baggage_for": true,
   "baggage_modal.payment.total": true,
+  "baggage_modal.select.no_cabin_baggage": true,
+  "baggage_modal.select.no_checked_baggage": true,
   "baggage_modal.select.current": true,
   "baggage_modal.priority_boarding": true,
   "baggage_modal.learn_more": true,
